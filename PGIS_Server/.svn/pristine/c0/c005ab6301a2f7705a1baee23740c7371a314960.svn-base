@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1603F991-620A-45FA-81B5-EE5A1FDC9874}</ProjectGuid>
+    <RootNamespace>PGisPubNetServer</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\DebugBin\</OutDir>
+    <IntDir>..\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\ReleaseBin\</OutDir>
+    <IntDir>..\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <TypeLibraryName>.\DebugBin/PGisPubNetServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>GLOG_NO_ABBREVIATED_SEVERITIES;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/PGisPubNetServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\DebugBin/PGisPubNetServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\DebugBin/PGisPubNetServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\DebugBin/PGisPubNetServer.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <TypeLibraryName>.\ReleaseBin/PGisPubNetServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>GLOG_NO_ABBREVIATED_SEVERITIES;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/PGisPubNetServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>..\ReleaseBin/PGisPubNetServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\ReleaseBin/PGisPubNetServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\ReleaseBin/PGisPubNetServer.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\IOCP\GCommProtocol.cpp" />
+    <ClCompile Include="..\..\IOCP\GLog.cpp" />
+    <ClCompile Include="..\..\IOCP\GMemory.cpp" />
+    <ClCompile Include="..\..\IOCP\GMessageList.cpp" />
+    <ClCompile Include="..\..\IOCP\GMessageListData.cpp" />
+    <ClCompile Include="..\..\IOCP\GPerHandleData.cpp" />
+    <ClCompile Include="..\..\IOCP\GPerIoData.cpp" />
+    <ClCompile Include="..\..\IOCP\GProcesserThread.cpp" />
+    <ClCompile Include="..\..\IOCP\GSocketInside.cpp" />
+    <ClCompile Include="..\..\IOCP\GTcpClient.cpp" />
+    <ClCompile Include="..\..\IOCP\GTcpServer.cpp" />
+    <ClCompile Include="..\..\IOCP\GThread.cpp" />
+    <ClCompile Include="..\..\IOCP\GUdpClient.cpp" />
+    <ClCompile Include="..\..\IOCP\GUdpServer.cpp" />
+    <ClCompile Include="..\..\IOCP\GWorkerThread.cpp" />
+    <ClCompile Include="..\..\IOCP\SwmrgLock.cpp" />
+    <ClCompile Include="BusManage_NewTerminal.cpp" />
+    <ClCompile Include="BusManage_OldTerminal.cpp" />
+    <ClCompile Include="ConToPub_BaseBusinessManage.cpp" />
+    <ClCompile Include="FTPConveyFile.cpp" />
+    <ClCompile Include="GIOCPsocket.cpp" />
+    <ClCompile Include="GPSProc.cpp" />
+    <ClCompile Include="IOSocketUdp.cpp" />
+    <ClCompile Include="MultiProtocolProcess.cpp" />
+    <ClCompile Include="PGisPubNetServer.cpp" />
+    <ClCompile Include="PubTerminalManage.cpp" />
+    <ClCompile Include="rwini.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WinServiceModule.cpp" />
+    <ClCompile Include="WriteLogThread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PGisPubNetServer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\IOCP\GCommProtocol.h" />
+    <ClInclude Include="..\..\IOCP\GLog.h" />
+    <ClInclude Include="..\..\IOCP\GMemory.h" />
+    <ClInclude Include="..\..\IOCP\GMessageList.h" />
+    <ClInclude Include="..\..\IOCP\GMessageListData.h" />
+    <ClInclude Include="..\..\IOCP\GPerHandleData.h" />
+    <ClInclude Include="..\..\IOCP\GPerIoData.h" />
+    <ClInclude Include="..\..\IOCP\GProcesserThread.h" />
+    <ClInclude Include="..\..\IOCP\GSocket.h" />
+    <ClInclude Include="..\..\IOCP\GSocketInside.h" />
+    <ClInclude Include="..\..\IOCP\GTcpClient.h" />
+    <ClInclude Include="..\..\IOCP\GTcpServer.h" />
+    <ClInclude Include="..\..\IOCP\GThread.h" />
+    <ClInclude Include="..\..\IOCP\GUdpClient.h" />
+    <ClInclude Include="..\..\IOCP\GUdpServer.h" />
+    <ClInclude Include="..\..\IOCP\GWorkerThread.h" />
+    <ClInclude Include="..\..\IOCP\HashmapManager.h" />
+    <ClInclude Include="..\..\IOCP\ListManager.h" />
+    <ClInclude Include="..\..\IOCP\MapManager.h" />
+    <ClInclude Include="..\..\IOCP\SwmrgLock.h" />
+    <ClInclude Include="BusManage_NewTerminal.h" />
+    <ClInclude Include="BusManage_OldTerminal.h" />
+    <ClInclude Include="ConToPub_BaseBusinessManage.h" />
+    <ClInclude Include="FTPConveyFile.h" />
+    <ClInclude Include="GIOCPsocket.h" />
+    <ClInclude Include="GPSProc.h" />
+    <ClInclude Include="IOSocketUdp.h" />
+    <ClInclude Include="MultiProtocolProcess.h" />
+    <ClInclude Include="PGisPubNetServer.h" />
+    <ClInclude Include="PubTerminalManage.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="rwini.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TcpInterface.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="WinServiceModule.h" />
+    <ClInclude Include="WriteLogThread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

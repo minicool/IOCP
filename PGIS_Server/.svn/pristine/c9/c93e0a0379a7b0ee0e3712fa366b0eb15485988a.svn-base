@@ -1,0 +1,2 @@
+PGisPubNetServer.exe /uninstall
+END

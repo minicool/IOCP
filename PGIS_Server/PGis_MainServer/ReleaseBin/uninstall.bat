@@ -1,0 +1,1 @@
+PGisMainCtrlServer.exe /uninstall

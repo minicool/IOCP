@@ -1,0 +1,152 @@
+[NetSet]
+# SERVER 最大用户连接数
+MaxConnect = 40000 
+# SERVER ACCEPT后数据接受超时
+AcceptTime = 10	
+#SERVER 数据接收空闲超时
+IdleOverTime = 100
+# CLIENT 发送心跳时间
+HeartBeatTime = 30
+# CLIENT 超时重连
+TimeAutoConnect = 5
+# IODATA 预计每秒发送数据的次数
+IODataCount = 12
+# IODATA 发送的BUFFER 大小
+IODataBuffer = 512
+# SOCKETBUFFER 设置SOCKET发送接收的数据 [一般为最小内存块]  8192
+SocketBuffer = 8192
+
+#读取配置文件失败
+LoadError = 读取配置文件失败!
+#模块启动成功信息
+StartInfo = 网络模块启动成功!
+#模块启动失败信息
+ErrorInfo = 网络模块启动失败!
+
+[GISServer]
+#多网卡需填写指定IP
+LocalIP = 
+#本地监听服务器端口,默认9000
+LocalPort = 9000
+#模块启动成功信息
+StartInfo = 监听GIS服务器业务模块启动成功!
+#模块启动失败信息
+ErrorInfo = 监听GIS服务器业务模块启动失败!
+
+[ConToPubServer]
+#多网卡需填写指定IP
+LocalIP = 
+#本地监听服务器端口,默认9003
+LocalPort = 9003
+#模块启动成功信息
+StartInfo = 监听ConToPub服务器业务模块启动成功!
+#模块启动失败信息
+ErrorInfo = 监听ConToPub服务器业务模块启动失败!
+
+[LocationServer]
+#是否连接地理位置服务器,0:否,1:是
+IsConnLocationServer = 1
+#双网卡需填写选定IP
+LocalIP = 
+#地理位置服务器IP地址
+LocationServerIP = 192.168.1.114
+#地理位置服务器端口
+LocationServerPort = 3130
+#模块启动成功信息
+StartInfo = 连接地理服务器业务模块启动成功!
+#模块启动失败信息
+ErrorInfo = 连接地理服务器业务模块启动失败!
+
+[GPSCheckServer]
+#是否连接巡防管理服务器,0:否,1:是
+IsConnGPSCheckServer = 1
+#双网卡需填写选定IP
+LocalIP = 
+#巡防管理服务器IP地址
+GPSCheckServerIP = 192.168.1.114
+#巡防管理服务器端口
+GPSCheckServerPort = 6000
+#模块启动成功信息
+StartInfo = 连接巡防管理服务器业务模块启动成功!
+#模块启动失败信息
+ErrorInfo = 连接巡防管理服务器业务模块启动失败!
+
+[ShanHaiServer_0]
+#是否连接山海服务器,0:否,1:是
+IsConnShanHaiServer = 1
+#多网卡需填写指定IP
+LocalIP = 
+#山海服务器IP地址
+SHServerIP = 127.0.0.1
+#山海服务器端口,默认7200
+SHServerPort = 7200
+#模块启动成功信息
+StartInfo = 连接山海服务器0业务模块启动成功!
+#模块启动失败信息
+ErrorInfo = 连接山海服务器0业务模块启动失败!
+#登陆山海服务器ID
+LoginID = gis
+#登陆山海服务器密码
+LoginPSWD = 123456
+#订阅ID 多个数据ID不能相同
+SubscriptionID = Shanhai_liuzhou
+#订阅类型
+#ALL 订阅所有类型
+#DEPTNUM 部门编号
+#GPSINFO GPS类型
+#DEVTYPE 设备类型
+#DEVID	 设备ID	
+Subscription = DEPTNUM,100000
+
+[ShanHaiServer_1]
+#是否连接山海服务器,0:否,1:是
+IsConnShanHaiServer = 1
+#多网卡需填写指定IP
+LocalIP = 
+#山海服务器IP地址
+SHServerIP = 127.0.0.1
+#山海服务器端口,默认7200
+SHServerPort = 6666
+#模块启动成功信息
+StartInfo = 连接山海服务器业务1模块启动成功!
+#模块启动失败信息
+ErrorInfo = 连接山海服务器业务1模块启动失败!
+#登陆山海服务器ID
+LoginID = gis
+#登陆山海服务器密码
+LoginPSWD = 123456
+#订阅ID 多个数据ID不能相同
+SubscriptionID = Shanhai_nanling
+#订阅类型
+#ALL 订阅所有类型
+#DEPTNUM 部门编号
+#GPSINFO GPS类型
+#DEVTYPE 设备类型
+#DEVID	 设备ID	
+Subscription = DEPTNUM,100100
+
+[DBServer]
+#webService地址
+WebServiceURL = http://192.168.1.114/HitomWebService/LocationData.asmx
+
+[SystemSet]
+//系统服务名字
+ServerName = Hitown_MainServer
+
+//系统日志级别，取值在[0-3]之间，包括0和3
+0:记录 info信息 alart信息
+1:记录 trace信息
+2:记录 debug信息
+LogLevel = 2
+
+#山海服务器连接数量
+ShanhaiCount = 2
+
+//巡防越界发送的告警消息
+PatroAlertTextInfo = 您已经超出了巡防区域
+
+//内外码转换设置
+[SetCpsx]
+L = 10
+M = 10
+S = 10

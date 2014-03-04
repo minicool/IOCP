@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b37c704c-54d0-4904-953f-18211fd5efbd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a794595d-6bfb-42cd-b90b-e19547149c4a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c856c9d6-537a-472c-bb00-77ae75926159}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="IOCP">
+      <UniqueIdentifier>{fd4f7a33-0cd5-43f9-8ad9-6e240cd2fc26}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BusManage_NewTerminal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BusManage_OldTerminal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConToPub_BaseBusinessManage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FTPConveyFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GIOCPsocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GPSProc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IOSocketUdp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiProtocolProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PGisPubNetServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PubTerminalManage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rwini.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinServiceModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteLogThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GCommProtocol.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GLog.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GMemory.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GMessageList.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GMessageListData.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GPerHandleData.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GPerIoData.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GProcesserThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GSocketInside.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GTcpClient.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GTcpServer.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GUdpClient.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GUdpServer.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GWorkerThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\SwmrgLock.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PGisPubNetServer.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BusManage_NewTerminal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BusManage_OldTerminal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConToPub_BaseBusinessManage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FTPConveyFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GIOCPsocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GPSProc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOSocketUdp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiProtocolProcess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PGisPubNetServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PubTerminalManage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rwini.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WinServiceModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteLogThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GCommProtocol.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GLog.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GMemory.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GMessageList.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GMessageListData.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GPerHandleData.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GPerIoData.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GProcesserThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GSocket.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GSocketInside.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GTcpClient.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GTcpServer.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GUdpClient.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GUdpServer.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GWorkerThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\HashmapManager.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\ListManager.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\MapManager.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\SwmrgLock.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

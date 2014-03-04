@@ -1,0 +1,85 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PGisPubNetServer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/PGisPubNetServer.res" /d "_DEBUG" /d "_AFXDLL" "D:\Project\PGisPubNetServer_ftp\PGisPubNetServer.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE2.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/PGisPubNetServer.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Project\PGisPubNetServer_ftp\CompletionRoutineServer.cpp"
+"D:\Project\PGisPubNetServer_ftp\FTPConveyFile.cpp"
+"D:\Project\PGisPubNetServer_ftp\GPSProc.cpp"
+"D:\Project\PGisPubNetServer_ftp\IOSocketUdp.cpp"
+"D:\Project\PGisPubNetServer_ftp\PGisPubNetServer.cpp"
+"D:\Project\PGisPubNetServer_ftp\PubTerminalManage.cpp"
+"D:\Project\PGisPubNetServer_ftp\rwini.cpp"
+"D:\Project\PGisPubNetServer_ftp\WinServiceModule.cpp"
+"D:\Project\PGisPubNetServer_ftp\WriteLogThread.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/PGisPubNetServer.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Project\PGisPubNetServer_ftp\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE3.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"DebugBin/PGisPubNetServer.pdb" /debug /machine:I386 /out:"DebugBin/PGisPubNetServer.exe" /pdbtype:sept 
+.\Debug\CompletionRoutineServer.obj
+.\Debug\FTPConveyFile.obj
+.\Debug\GPSProc.obj
+.\Debug\IOSocketUdp.obj
+.\Debug\PGisPubNetServer.obj
+.\Debug\PubTerminalManage.obj
+.\Debug\rwini.obj
+.\Debug\StdAfx.obj
+.\Debug\WinServiceModule.obj
+.\Debug\WriteLogThread.obj
+.\Debug\PGisPubNetServer.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CompletionRoutineServer.cpp
+FTPConveyFile.cpp
+GPSProc.cpp
+IOSocketUdp.cpp
+PGisPubNetServer.cpp
+PubTerminalManage.cpp
+rwini.cpp
+WinServiceModule.cpp
+WriteLogThread.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE6.tmp" with contents
+[
+/nologo /o"DebugBin/PGisPubNetServer.bsc" 
+.\Debug\StdAfx.sbr
+.\Debug\CompletionRoutineServer.sbr
+.\Debug\FTPConveyFile.sbr
+.\Debug\GPSProc.sbr
+.\Debug\IOSocketUdp.sbr
+.\Debug\PGisPubNetServer.sbr
+.\Debug\PubTerminalManage.sbr
+.\Debug\rwini.sbr
+.\Debug\WinServiceModule.sbr
+.\Debug\WriteLogThread.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE6.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+PGisPubNetServer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

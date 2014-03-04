@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{33371EBD-9224-4595-8464-9A79DE939E52}</ProjectGuid>
+    <RootNamespace>PGisMainCtrlServer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\DebugBin\</OutDir>
+    <IntDir>..\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Project\PGIS物联网\ATL_Server\include;$(IncludePath)</IncludePath>
+    <SourcePath>D:\Project\PGIS物联网\ATL_Server\source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\ReleaseBin\</OutDir>
+    <IntDir>..\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\Project\PGIS物联网\ATL_Server\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\IOCP\GCommProtocol.cpp" />
+    <ClCompile Include="..\..\IOCP\GLog.cpp" />
+    <ClCompile Include="..\..\IOCP\GMemory.cpp" />
+    <ClCompile Include="..\..\IOCP\GMessageList.cpp" />
+    <ClCompile Include="..\..\IOCP\GMessageListData.cpp" />
+    <ClCompile Include="..\..\IOCP\GPerHandleData.cpp" />
+    <ClCompile Include="..\..\IOCP\GPerIoData.cpp" />
+    <ClCompile Include="..\..\IOCP\GProcesserThread.cpp" />
+    <ClCompile Include="..\..\IOCP\GSocketInside.cpp" />
+    <ClCompile Include="..\..\IOCP\GTcpClient.cpp" />
+    <ClCompile Include="..\..\IOCP\GTcpServer.cpp" />
+    <ClCompile Include="..\..\IOCP\GThread.cpp" />
+    <ClCompile Include="..\..\IOCP\GUdpClient.cpp" />
+    <ClCompile Include="..\..\IOCP\GUdpServer.cpp" />
+    <ClCompile Include="..\..\IOCP\GWorkerThread.cpp" />
+    <ClCompile Include="..\..\IOCP\SwmrgLock.cpp" />
+    <ClCompile Include="BusManage_ConnectToGPSCheckServer.cpp" />
+    <ClCompile Include="BusManage_ConnectToLocationServer.cpp" />
+    <ClCompile Include="BusManage_ConnectToShanhaiServer.cpp" />
+    <ClCompile Include="BusManage_ConToPub.cpp" />
+    <ClCompile Include="BusManage_GISTerminal.cpp" />
+    <ClCompile Include="DBManage_WebServer.cpp" />
+    <ClCompile Include="Encrypt.cpp" />
+    <ClCompile Include="GIOCPsocket.cpp" />
+    <ClCompile Include="MemoryPool.cpp" />
+    <ClCompile Include="PGisMainCtrlServer.cpp" />
+    <ClCompile Include="rwini.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SubscriptionManager.cpp" />
+    <ClCompile Include="WinServiceModule.cpp" />
+    <ClCompile Include="WriteLogThread.cpp" />
+    <ClCompile Include="HttpInterface\HttpInterface.cpp" />
+    <ClCompile Include="HttpInterface\XMLMakeUp.cpp" />
+    <ClCompile Include="HttpInterface\XMLParse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PGisMainCtrlServer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\IOCP\GCommProtocol.h" />
+    <ClInclude Include="..\..\IOCP\GLog.h" />
+    <ClInclude Include="..\..\IOCP\GMemory.h" />
+    <ClInclude Include="..\..\IOCP\GMessageList.h" />
+    <ClInclude Include="..\..\IOCP\GMessageListData.h" />
+    <ClInclude Include="..\..\IOCP\GPerHandleData.h" />
+    <ClInclude Include="..\..\IOCP\GPerIoData.h" />
+    <ClInclude Include="..\..\IOCP\GProcesserThread.h" />
+    <ClInclude Include="..\..\IOCP\GSocket.h" />
+    <ClInclude Include="..\..\IOCP\GSocketInside.h" />
+    <ClInclude Include="..\..\IOCP\GTcpClient.h" />
+    <ClInclude Include="..\..\IOCP\GTcpServer.h" />
+    <ClInclude Include="..\..\IOCP\GThread.h" />
+    <ClInclude Include="..\..\IOCP\GUdpClient.h" />
+    <ClInclude Include="..\..\IOCP\GUdpServer.h" />
+    <ClInclude Include="..\..\IOCP\GWorkerThread.h" />
+    <ClInclude Include="..\..\IOCP\HashmapManager.h" />
+    <ClInclude Include="..\..\IOCP\ListManager.h" />
+    <ClInclude Include="..\..\IOCP\MapManager.h" />
+    <ClInclude Include="..\..\IOCP\SwmrgLock.h" />
+    <ClInclude Include="BusManage_ConnectToGPSCheckServer.h" />
+    <ClInclude Include="BusManage_ConnectToLocationServer.h" />
+    <ClInclude Include="BusManage_ConnectToShanhaiServer.h" />
+    <ClInclude Include="BusManage_ConToPub.h" />
+    <ClInclude Include="BusManage_GISTerminal.h" />
+    <ClInclude Include="DBManage_WebServer.h" />
+    <ClInclude Include="Encrypt.h" />
+    <ClInclude Include="GIOCPsocket.h" />
+    <ClInclude Include="MemoryPool.h" />
+    <ClInclude Include="PGisMainCtrlServer.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="rwini.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SubscriptionManager.h" />
+    <ClInclude Include="TcpInterface.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="WebService.h" />
+    <ClInclude Include="WinServiceModule.h" />
+    <ClInclude Include="WriteLogThread.h" />
+    <ClInclude Include="TService.h" />
+    <ClInclude Include="HttpInterface\HttpInterface.h" />
+    <ClInclude Include="HttpInterface\XMLMakeUp.h" />
+    <ClInclude Include="HttpInterface\XMLParse.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="TService\LocationData.disco">
+      <DeploymentContent>true</DeploymentContent>
+    </CustomBuild>
+    <CustomBuild Include="TService\LocationData.wsdl" />
+    <CustomBuild Include="TService\results.discomap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

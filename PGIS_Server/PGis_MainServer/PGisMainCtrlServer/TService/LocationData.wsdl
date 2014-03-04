@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_LocateDataAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locationDataInfo" type="tns:LocationDataInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LocationDataInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DEVICE_CODE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="USER_TYPE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="USER_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GPS_DATETIME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GPSAV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LONG_WE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LONGITUDE" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="LAT_NS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LATITUDE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SPEED" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DIRECTION" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCATION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STATE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HYTPGIS_LocateDataAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_LocateDataAddResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_LocateSpecialDataAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locationSpecialDataInfo" type="tns:LocationSpecialDataInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LocationSpecialDataInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SPECIAL_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GPS_DATETIME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GPSAV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LONG_WE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LONGITUDE" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="LAT_NS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LATITUDE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SPEED" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DIRECTION" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCATION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STATE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HYTPGIS_LocateSpecialDataAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_LocateSpecialDataAddResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DeviceTable_Query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="szDeviceCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DeviceTable_QueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_DeviceTable_QueryResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="deviceClass" type="tns:DeviceInfoClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeviceInfoClass">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DEVICE_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEVICE_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEPT_NO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PUBLIC_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECIAL_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRODUCER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEVICE_TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ONLINE_STATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALIDE_DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USER_TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USER_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REMARK" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HYTPGIS_DeviceModify_OnLineStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DEVICE_CODE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OnLineStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DeviceModify_OnLineStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_DeviceModify_OnLineStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DeviceUpdate_OffLine">
+        <s:complexType />
+      </s:element>
+      <s:element name="HYTPGIS_DeviceUpdate_OffLineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_DeviceUpdate_OffLineResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DeviceQuery_BySpecialCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="szSpecialCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DeviceQuery_BySpecialCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_DeviceQuery_BySpecialCodeResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="deviceClass" type="tns:DeviceInfoClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_Test_Dataset">
+        <s:complexType />
+      </s:element>
+      <s:element name="HYTPGIS_Test_DatasetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HYTPGIS_Test_DatasetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_PatroAreaUser_QueryAllDevice">
+        <s:complexType />
+      </s:element>
+      <s:element name="HYTPGIS_PatroAreaUser_QueryAllDeviceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HYTPGIS_PatroAreaUser_QueryAllDeviceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_AlarmDevice_Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="szDeviceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="szChunnel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_AlarmDevice_AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_AlarmDevice_AddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DynamicGroup_QueryMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="szDeviceCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DynamicGroup_QueryMemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HYTPGIS_DynamicGroup_QueryMemberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DynamicGroup_QueryByGID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_DynamicGroup_QueryByGIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HYTPGIS_DynamicGroup_QueryByGIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_LocationData_ModifyByLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GpsID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="szDeviceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="szLocation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_LocationData_ModifyByLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_LocationData_ModifyByLocationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_Group_ModifyDeviceState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="szDeviceCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="state" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_Group_ModifyDeviceStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HYTPGIS_Group_ModifyDeviceStateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_Group_QueryDeviceGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="szDeviceCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HYTPGIS_Group_QueryDeviceGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HYTPGIS_Group_QueryDeviceGroupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_LocateDataAddSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_LocateDataAdd" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_LocateDataAddSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_LocateDataAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_LocateSpecialDataAddSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_LocateSpecialDataAdd" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_LocateSpecialDataAddSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_LocateSpecialDataAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DeviceTable_QuerySoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DeviceTable_Query" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DeviceTable_QuerySoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DeviceTable_QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DeviceModify_OnLineStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DeviceModify_OnLineStatus" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DeviceModify_OnLineStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DeviceModify_OnLineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DeviceUpdate_OffLineSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DeviceUpdate_OffLine" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DeviceUpdate_OffLineSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DeviceUpdate_OffLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DeviceQuery_BySpecialCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DeviceQuery_BySpecialCode" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DeviceQuery_BySpecialCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DeviceQuery_BySpecialCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_Test_DatasetSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_Test_Dataset" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_Test_DatasetSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_Test_DatasetResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_PatroAreaUser_QueryAllDeviceSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_PatroAreaUser_QueryAllDevice" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_PatroAreaUser_QueryAllDeviceSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_PatroAreaUser_QueryAllDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_AlarmDevice_AddSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_AlarmDevice_Add" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_AlarmDevice_AddSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_AlarmDevice_AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DynamicGroup_QueryMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DynamicGroup_QueryMember" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DynamicGroup_QueryMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DynamicGroup_QueryMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DynamicGroup_QueryByGIDSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DynamicGroup_QueryByGID" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_DynamicGroup_QueryByGIDSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_DynamicGroup_QueryByGIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_LocationData_ModifyByLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_LocationData_ModifyByLocation" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_LocationData_ModifyByLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_LocationData_ModifyByLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_Group_ModifyDeviceStateSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_Group_ModifyDeviceState" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_Group_ModifyDeviceStateSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_Group_ModifyDeviceStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_Group_QueryDeviceGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_Group_QueryDeviceGroup" />
+  </wsdl:message>
+  <wsdl:message name="HYTPGIS_Group_QueryDeviceGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:HYTPGIS_Group_QueryDeviceGroupResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LocationDataSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocateDataAdd">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">HITOM_LOCATION_DATA插入数据</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_LocateDataAddSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_LocateDataAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocateSpecialDataAdd">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">HITOM_LOCATION_DATA插入数据</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_LocateSpecialDataAddSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_LocateSpecialDataAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceTable_Query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">HITOM_DEVICE之查询</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_DeviceTable_QuerySoapIn" />
+      <wsdl:output message="tns:HYTPGIS_DeviceTable_QuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceModify_OnLineStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">HITOM_DEVICE之更新OnlineStatus</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_DeviceModify_OnLineStatusSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_DeviceModify_OnLineStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceUpdate_OffLine">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">HITOM_DEVICE之更新OnlineStatus--让所有终端下线</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_DeviceUpdate_OffLineSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_DeviceUpdate_OffLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceQuery_BySpecialCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">HITOM_DEVICE之通过专网号码查询</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_DeviceQuery_BySpecialCodeSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_DeviceQuery_BySpecialCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Test_Dataset">
+      <wsdl:input message="tns:HYTPGIS_Test_DatasetSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_Test_DatasetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_PatroAreaUser_QueryAllDevice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回号码表</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_PatroAreaUser_QueryAllDeviceSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_PatroAreaUser_QueryAllDeviceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_AlarmDevice_Add">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发布警情报警</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_AlarmDevice_AddSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_AlarmDevice_AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DynamicGroup_QueryMember">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询某终端是否有未取消的应该取消的动态组</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_DynamicGroup_QueryMemberSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_DynamicGroup_QueryMemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DynamicGroup_QueryByGID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询某个动态组成员</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_DynamicGroup_QueryByGIDSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_DynamicGroup_QueryByGIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocationData_ModifyByLocation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新地理位置</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_LocationData_ModifyByLocationSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_LocationData_ModifyByLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Group_ModifyDeviceState">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改动态组中某终端的状态</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_Group_ModifyDeviceStateSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_Group_ModifyDeviceStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Group_QueryDeviceGroup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改动态组中某终端上线的状态  得到3的动态组号</wsdl:documentation>
+      <wsdl:input message="tns:HYTPGIS_Group_QueryDeviceGroupSoapIn" />
+      <wsdl:output message="tns:HYTPGIS_Group_QueryDeviceGroupSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LocationDataSoap" type="tns:LocationDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocateDataAdd">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_LocateDataAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocateSpecialDataAdd">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_LocateSpecialDataAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceTable_Query">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_DeviceTable_Query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceModify_OnLineStatus">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_DeviceModify_OnLineStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceUpdate_OffLine">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_DeviceUpdate_OffLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceQuery_BySpecialCode">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_DeviceQuery_BySpecialCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Test_Dataset">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_Test_Dataset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_PatroAreaUser_QueryAllDevice">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_PatroAreaUser_QueryAllDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_AlarmDevice_Add">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_AlarmDevice_Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DynamicGroup_QueryMember">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_DynamicGroup_QueryMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DynamicGroup_QueryByGID">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_DynamicGroup_QueryByGID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocationData_ModifyByLocation">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_LocationData_ModifyByLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Group_ModifyDeviceState">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_Group_ModifyDeviceState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Group_QueryDeviceGroup">
+      <soap:operation soapAction="http://tempuri.org/HYTPGIS_Group_QueryDeviceGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LocationDataSoap12" type="tns:LocationDataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocateDataAdd">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_LocateDataAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocateSpecialDataAdd">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_LocateSpecialDataAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceTable_Query">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_DeviceTable_Query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceModify_OnLineStatus">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_DeviceModify_OnLineStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceUpdate_OffLine">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_DeviceUpdate_OffLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DeviceQuery_BySpecialCode">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_DeviceQuery_BySpecialCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Test_Dataset">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_Test_Dataset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_PatroAreaUser_QueryAllDevice">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_PatroAreaUser_QueryAllDevice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_AlarmDevice_Add">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_AlarmDevice_Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DynamicGroup_QueryMember">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_DynamicGroup_QueryMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_DynamicGroup_QueryByGID">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_DynamicGroup_QueryByGID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_LocationData_ModifyByLocation">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_LocationData_ModifyByLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Group_ModifyDeviceState">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_Group_ModifyDeviceState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HYTPGIS_Group_QueryDeviceGroup">
+      <soap12:operation soapAction="http://tempuri.org/HYTPGIS_Group_QueryDeviceGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LocationData">
+    <wsdl:port name="LocationDataSoap" binding="tns:LocationDataSoap">
+      <soap:address location="http://192.168.1.139/HytDbWs/LocationData.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LocationDataSoap12" binding="tns:LocationDataSoap12">
+      <soap12:address location="http://192.168.1.139/HytDbWs/LocationData.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,2 @@
+PGisPubNetServer.exe /start
+END

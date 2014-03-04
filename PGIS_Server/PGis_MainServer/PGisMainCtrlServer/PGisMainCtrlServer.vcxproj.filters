@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="生成的文件">
+      <UniqueIdentifier>{67DA6AC5-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="TService">
+      <UniqueIdentifier>http://192.168.1.139/HytDbWs/LocationData.asmx</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpInterface">
+      <UniqueIdentifier>{9db443bf-463f-4bb3-a486-b4033a234a53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOCP">
+      <UniqueIdentifier>{57649f8b-3aeb-4150-8252-9ec309e84747}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BusManage_ConnectToGPSCheckServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BusManage_ConnectToLocationServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BusManage_ConnectToShanhaiServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BusManage_ConToPub.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BusManage_GISTerminal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DBManage_WebServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Encrypt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GIOCPsocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PGisMainCtrlServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rwini.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SubscriptionManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WinServiceModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteLogThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpInterface\HttpInterface.cpp">
+      <Filter>HttpInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpInterface\XMLMakeUp.cpp">
+      <Filter>HttpInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpInterface\XMLParse.cpp">
+      <Filter>HttpInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GCommProtocol.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GLog.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GMemory.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GMessageList.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GMessageListData.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GPerHandleData.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GPerIoData.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GProcesserThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GSocketInside.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GTcpClient.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GTcpServer.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GUdpClient.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GUdpServer.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\GWorkerThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IOCP\SwmrgLock.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PGisMainCtrlServer.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BusManage_ConnectToGPSCheckServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BusManage_ConnectToLocationServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BusManage_ConnectToShanhaiServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BusManage_ConToPub.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BusManage_GISTerminal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DBManage_WebServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Encrypt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GIOCPsocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PGisMainCtrlServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rwini.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SubscriptionManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebService.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WinServiceModule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteLogThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TService.h">
+      <Filter>生成的文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpInterface\HttpInterface.h">
+      <Filter>HttpInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpInterface\XMLMakeUp.h">
+      <Filter>HttpInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpInterface\XMLParse.h">
+      <Filter>HttpInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GCommProtocol.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GLog.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GMemory.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GMessageList.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GMessageListData.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GPerHandleData.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GPerIoData.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GProcesserThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GSocket.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GSocketInside.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GTcpClient.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GTcpServer.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GUdpClient.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GUdpServer.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\GWorkerThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\HashmapManager.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\ListManager.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\MapManager.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IOCP\SwmrgLock.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="TService\LocationData.disco">
+      <Filter>TService</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TService\LocationData.wsdl">
+      <Filter>TService</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TService\results.discomap">
+      <Filter>TService</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
